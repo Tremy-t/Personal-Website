@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,6 +66,11 @@ const Navbar = () => {
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
+
+        {/* Add the ThemeToggle component right before the CTA button */}
+        <div className="flex items-center ml-4">
+          <ThemeToggle />
+        </div>
       </div>
 
       {/* Mobile Navigation */}

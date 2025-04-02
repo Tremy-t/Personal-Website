@@ -32,7 +32,7 @@ const projects: Project[] = [
     id: 3,
     title: "Travel Blog Platform",
     category: "Web Development",
-    image: "https://images.unsplash.com/photo-1648972904349-6e44c42644a7",
+    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
     description: "Responsive travel blog platform with content management system for travel enthusiasts.",
     link: "#",
   },
