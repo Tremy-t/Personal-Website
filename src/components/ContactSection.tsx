@@ -35,7 +35,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-padding bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
@@ -124,7 +124,7 @@ const ContactSection = () => {
             <h3 className="text-2xl font-bold mb-6">Send me a message</h3>
             
             {isSubmitted ? (
-              <div className="bg-green-50 text-green-800 p-4 rounded-lg border border-green-200 flex items-center">
+              <div className="bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300 p-4 rounded-lg border border-green-200 dark:border-green-800 flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
@@ -142,7 +142,7 @@ const ContactSection = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50"
+                      className="w-full px-4 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50"
                       placeholder="Your name"
                     />
                   </div>
@@ -155,7 +155,7 @@ const ContactSection = () => {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50"
+                      className="w-full px-4 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50"
                       placeholder="Your email"
                     />
                   </div>
@@ -170,7 +170,7 @@ const ContactSection = () => {
                     required
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50"
+                    className="w-full px-4 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50"
                     placeholder="Subject"
                   />
                 </div>
@@ -184,7 +184,7 @@ const ContactSection = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 resize-none"
+                    className="w-full px-4 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent/50 resize-none"
                     placeholder="Your message"
                   />
                 </div>

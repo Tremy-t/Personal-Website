@@ -27,7 +27,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="section-padding bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
@@ -75,7 +75,7 @@ const AboutSection = () => {
           {skills.map((skill, index) => (
             <div 
               key={index} 
-              className="bg-secondary/50 p-6 rounded-lg border border-border hover:shadow-md transition-shadow"
+              className="bg-secondary p-6 rounded-lg border border-border hover:shadow-md transition-shadow"
             >
               <div className="mb-4">{skill.icon}</div>
               <h4 className="text-xl font-semibold mb-2">{skill.title}</h4>
