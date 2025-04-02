@@ -57,7 +57,7 @@ const PortfolioSection = () => {
     : projects.filter(project => project.category === activeCategory);
 
   return (
-    <section id="portfolio" className="section-padding bg-secondary/30">
+    <section id="portfolio" className="section-padding bg-secondary/30 dark:bg-secondary/10">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Portfolio</h2>
@@ -75,7 +75,7 @@ const PortfolioSection = () => {
               className={`px-4 py-2 rounded-full text-sm transition-colors ${
                 activeCategory === category 
                   ? "bg-accent text-white" 
-                  : "bg-white hover:bg-accent/10"
+                  : "bg-white dark:bg-white/90 text-foreground dark:text-black hover:bg-accent/10"
               }`}
             >
               {category}
@@ -87,7 +87,7 @@ const PortfolioSection = () => {
           {filteredProjects.map(project => (
             <div 
               key={project.id} 
-              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-border"
+              className="bg-white dark:bg-secondary/50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-border"
             >
               <div className="relative h-64 overflow-hidden">
                 <img 
@@ -107,7 +107,7 @@ const PortfolioSection = () => {
               <div className="p-6">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-bold">{project.title}</h3>
-                  <span className="text-xs bg-secondary px-3 py-1 rounded-full text-muted-foreground">
+                  <span className="text-xs bg-secondary dark:bg-secondary/80 px-3 py-1 rounded-full text-muted-foreground">
                     {project.category}
                   </span>
                 </div>
@@ -125,7 +125,7 @@ const PortfolioSection = () => {
 
         {activeProject && (
           <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
-            <div className="bg-white rounded-lg w-full max-w-3xl max-h-[90vh] overflow-auto">
+            <div className="bg-white dark:bg-background rounded-lg w-full max-w-3xl max-h-[90vh] overflow-auto">
               <div className="relative h-64 md:h-80">
                 <img 
                   src={activeProject.image} 
@@ -142,7 +142,7 @@ const PortfolioSection = () => {
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-bold">{activeProject.title}</h3>
-                  <span className="text-sm bg-secondary px-3 py-1 rounded-full text-muted-foreground">
+                  <span className="text-sm bg-secondary dark:bg-secondary/80 px-3 py-1 rounded-full text-muted-foreground">
                     {activeProject.category}
                   </span>
                 </div>
@@ -150,7 +150,7 @@ const PortfolioSection = () => {
                 <div className="flex justify-between">
                   <button
                     onClick={() => setActiveProject(null)}
-                    className="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-100 transition-colors"
+                    className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                   >
                     Close
                   </button>
